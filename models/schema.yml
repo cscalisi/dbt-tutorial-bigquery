@@ -3,6 +3,7 @@ version: 2
 models:
   - name: customers
     description: One record per customer
+    tags: ['end_models']
     config:
       meta:
         owner: core_product
@@ -41,3 +42,20 @@ models:
         tests:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+  
+  - name: stg_payments
+    description: This model cleans up payment data
+    meta:
+      source: stripe
+    columns:
+      - name: payment_id 
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: orderid
+        description: unique id for order at hand
+        meta:
+          join_to:
+            table: stg_orders
+            column: order_id
