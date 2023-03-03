@@ -3,12 +3,20 @@ version: 2
 models:
   - name: customers
     description: One record per customer
+    config:
+      meta:
+        owner: core_product
+        schedule: daily
+        DAG: core_daily_run
     columns:
       - name: customer_id
         description: Primary key
         tests:
           - unique
           - not_null
+        meta:
+          contains_pii: true
+          is_sensitive: true
       - name: first_order_date
         description: NULL when a customer has not yet placed an order.
 
