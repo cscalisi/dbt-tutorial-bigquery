@@ -59,3 +59,4 @@ models:
           join_to:
             table: stg_orders
             column: order_id
+          is_test: true
