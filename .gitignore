@@ -2,3 +2,6 @@
 target/
 dbt_packages/
 logs/
+
+# macOS files
+.DS_Store
