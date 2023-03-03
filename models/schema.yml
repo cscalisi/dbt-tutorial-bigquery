@@ -46,7 +46,7 @@ models:
   - name: stg_payments
     description: This model cleans up payment data
     meta:
-      source: stripe
+      source: stripe - jaffle
     columns:
       - name: payment_id 
         description: Primary key
