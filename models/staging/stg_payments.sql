@@ -1,6 +1,9 @@
 {{
     config(
-        tags = 'try_this'
+        tags = 'payments',
+        meta = {
+            'contains_PII': 'True'
+        }
     )
 }}
 

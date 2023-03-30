@@ -1,0 +1,7 @@
+selectors:
+  - name: first_test
+    description: "This is a test on the jaffle shop tutorial project"
+    default: true
+    definition:
+      method: tag
+      value: payments
