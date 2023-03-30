@@ -6,7 +6,7 @@ models:
     tags: ['end_models']
     config:
       meta:
-        owner: core_product
+        team: core_product
         schedule: daily
         DAG: core_daily_run
     columns:
